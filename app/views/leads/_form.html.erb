@@ -11,33 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :mobile_phone %><br>
-    <%= f.text_field :mobile_phone %>
+    <%= f.text_field :mobile_phone, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :position_id %><br>
     <%= f.select :position_id, Position.all.collect { |p| [p.name, p.id] },
-          include_blank: true %>
+          {}, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :tool_id %><br>
     <%= f.select :tool_id, Tool.all.collect { |t| [t.name, t.id] },
-          include_blank: true %>
+          {}, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group field">
     <%= f.label :team_size %><br>
-    <%= f.text_field :team_size %>
+    <%= f.text_field :team_size, class: "form-control" %>
   </div>
+
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag "Cadastrar", class: 'btn btn-primary btn-lg btn-full' %>
   </div>
 <% end %>
