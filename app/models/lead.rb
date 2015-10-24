@@ -6,6 +6,9 @@ class Lead < ActiveRecord::Base
   belongs_to :position
   belongs_to :tool
 
+  validates :name, :email, :mobile_phone, :position, :tool, :team_size,
+    presence: true
+  validates :team_size, numericality: { only_integer: true }
   validate :email_format
   validate :phone_format
 
