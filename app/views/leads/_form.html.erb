@@ -25,11 +25,13 @@
   </div>
   <div class="field">
     <%= f.label :position_id %><br>
-    <%= f.text_field :position_id %>
+    <%= f.select :position_id, Position.all.collect { |p| [p.name, p.id] },
+          include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :tool_id %><br>
-    <%= f.text_field :tool_id %>
+    <%= f.select :tool_id, Tool.all.collect { |t| [t.name, t.id] },
+          include_blank: true %>
   </div>
   <div class="field">
     <%= f.label :team_size %><br>
