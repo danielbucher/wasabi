@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151024141502) do
+ActiveRecord::Schema.define(version: 20151024180246) do
 
   create_table "leads", force: :cascade do |t|
     t.string   "name"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20151024141502) do
     t.string   "team_size"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "twitter"
   end
 
   add_index "leads", ["position_id"], name: "index_leads_on_position_id"
