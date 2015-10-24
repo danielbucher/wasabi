@@ -5,3 +5,12 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+positions = ['Empresário(a)/Executivo(a)', 'Gestor(a) de Vendas',
+              'Gestor(a) de Marketing', 'Vendedor(a) Interno',
+              'Vendedor(a) Externo', 'Consultor(a) Empresarial',
+              'Secretário(a)/Assistente', 'Estagiário(a)']
+
+positions.each do |name|
+  Position.create(name: name)
+end
