@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/danielbucher/wasabi.png?label=ready&title=Ready)](https://waffle.io/danielbucher/wasabi)
 # README
 
 This README would normally document whatever steps are necessary to get the
