@@ -15,6 +15,8 @@ class LeadsController < ApplicationController
   # GET /leads/new
   def new
     @lead = Lead.new
+
+    render :new, layout: 'dark_application'
   end
 
   # GET /leads/1/edit
@@ -31,7 +33,7 @@ class LeadsController < ApplicationController
         format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
         format.json { render :show, status: :created, location: @lead }
       else
-        format.html { render :new }
+        format.html { render :new, layout: 'dark_application' }
         format.json { render json: @lead.errors, status: :unprocessable_entity }
       end
     end

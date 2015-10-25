@@ -1,12 +1,1 @@
-$body-bg: #3c556d;
-$text-color: #F9F9F9;
-
-@import "scaffolds.scss";
-@import "leads.scss";
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
-.btn-full {
-  width: 100%;
-  margin-top: 15px;
-}
+@import "shared.scss";
