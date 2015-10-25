@@ -4,13 +4,21 @@ class Lead < ActiveRecord::Base
   EMAIL_EX = /\A(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])\z/
 
   TEAM_SIZES = [ "1 pessoa",
-                   "2 pessoas",
-                   "Até 5 pessoas",
-                   "Até 10 pessoas",
-                   "Mais que 10 pessoas" ]
+                 "2 pessoas",
+                 "Até 5 pessoas",
+                 "Até 10 pessoas",
+                 "Mais que 10 pessoas"
+  ]
+
+  TOOLS = [ 'Panilha Excel',
+            'Agendor',
+            'Pipedrive',
+            'Salesforce',
+            'Não uso nenhuma ferramenta',
+            'Outro'
+  ]
 
   belongs_to :position
-  belongs_to :tool
 
   validates :name, :email, :mobile_phone, :position, :tool, :team_size,
     presence: true

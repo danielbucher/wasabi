@@ -14,10 +14,3 @@ positions = ['Empresário/Executivo', 'Gestor de Vendas',
 positions.each do |name|
   Position.create(name: name)
 end
-
-tools = ['Panilha Excel', 'Agendor', 'Pipedrive', 'Salesforce',
-          'Não uso nenhuma ferramenta']
-
-tools.each do |name|
-  Tool.create(name: name)
-end

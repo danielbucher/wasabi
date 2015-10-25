@@ -34,12 +34,17 @@
   </div>
   <div class="form-group field">
     <%= label_tag :tool_id, "Qual ferramenta você utiliza para organizar e acompanhar suas vendas?" %>
-    <%= f.select :tool_id, Tool.all.collect { |t| [t.name, t.id] },
-          {}, class: "form-control" %>
+    <%= f.select :tool, Lead::TOOLS,
+          {}, class: "form-control", id: "sb-tool" %>
+  </div>
+  <div class="form-group field" data-depends-on=#sb-toll
+    data-depends-on-value="Outro">
+    <%= label_tag :tool_id, "Se respondeu outro, por favor escrever o nome:" %>
+    <%= text_field_tag :tool, nil, class: "form-control" %>
   </div>
   <div class="form-group field">
     <%= label_tag :team_size, "Tamanho da sua Equipe Comercial" %>
-    <%= f.select :team_size, Lead::TEAM_SIZES.map { |s| [s, s] },
+    <%= f.select :team_size, Lead::TEAM_SIZES,
           { include_blank: true }, class: "form-control" %>
   </div>
 
