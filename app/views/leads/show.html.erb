@@ -16,13 +16,18 @@
 </p>
 
 <p>
+  <strong>Twitter:</strong>
+  <%= @lead.twitter %>
+</p>
+
+<p>
   <strong>Position:</strong>
-  <%= @lead.position %>
+  <%= @lead.position.try(:name) %>
 </p>
 
 <p>
   <strong>Tool:</strong>
-  <%= @lead.tool %>
+  <%= @lead.tool.try(:name) %>
 </p>
 
 <p>

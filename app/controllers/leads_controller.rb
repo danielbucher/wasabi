@@ -69,6 +69,8 @@ class LeadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lead_params
-      params.require(:lead).permit(:name, :email, :mobile_phone, :position_id, :tool_id, :team_size)
+      params.require(:lead)
+        .permit(:name, :email, :mobile_phone, :position_id, :tool_id,
+                  :team_size, :twitter)
     end
 end
