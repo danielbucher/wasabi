@@ -9,7 +9,7 @@
 positions = ['Empresário/Executivo', 'Gestor de Vendas',
               'Gestor de Marketing', 'Vendedor Interno',
               'Vendedor Externo', 'Consultor Empresarial',
-              'Secretária(o)/Assistente', 'Estagiária(o)']
+              'Secretária(o)/Assistente', 'Estagiária(o)', 'Outro']
 
 positions.each do |name|
   Position.create(name: name)
