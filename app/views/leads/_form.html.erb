@@ -33,14 +33,13 @@
           {}, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= label_tag :tool_id, "Qual ferramenta você utiliza para organizar e acompanhar suas vendas?" %>
+    <%= label_tag :tool, "Qual ferramenta você utiliza para organizar e acompanhar suas vendas?" %>
     <%= f.select :tool, Lead::TOOLS,
-          {}, class: "form-control", id: "sb-tool" %>
+          {}, class: "form-control" %>
   </div>
-  <div class="form-group field" data-depends-on=#sb-toll
-    data-depends-on-value="Outro">
-    <%= label_tag :tool_id, "Se respondeu outro, por favor escrever o nome:" %>
-    <%= text_field_tag :tool, nil, class: "form-control" %>
+  <div class="form-group field">
+    <%= label_tag :tool, "Se respondeu outro, por favor escrever o nome:" %>
+    <%= text_field_tag 'lead[tool]', nil, class: "form-control" %>
   </div>
   <div class="form-group field">
     <%= label_tag :team_size, "Tamanho da sua Equipe Comercial" %>

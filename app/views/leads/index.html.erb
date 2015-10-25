@@ -21,7 +21,7 @@
         <td><%= lead.name %></td>
         <td><%= lead.email %></td>
         <td><%= lead.mobile_phone %></td>
-        <td><%= lead.position %></td>
+        <td><%= lead.position.try(:name) %></td>
         <td><%= lead.tool %></td>
         <td><%= lead.team_size %></td>
         <td><%= link_to 'Show', lead %></td>
