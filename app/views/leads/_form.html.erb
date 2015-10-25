@@ -12,37 +12,38 @@
   <% end %>
 
   <div class="form-group field">
-    <%= f.label :name %><br>
+    <%= label_tag :name, "Nome" %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= f.label :email %><br>
+    <%= label_tag :email, "E-mail" %>
     <%= f.text_field :email, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= f.label :twitter %><br>
+    <%= label_tag :twitter %>
     <%= f.text_field :twitter, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= f.label :mobile_phone %><br>
+    <%= label_tag :mobile_phone, "Celular" %>
     <%= f.text_field :mobile_phone, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= f.label :position_id %><br>
+    <%= label_tag :position_id, "Cargo" %>
     <%= f.select :position_id, Position.all.collect { |p| [p.name, p.id] },
           {}, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= f.label :tool_id %><br>
+    <%= label_tag :tool_id, "Qual ferramenta você utiliza para organizar e acompanhar suas vendas?" %>
     <%= f.select :tool_id, Tool.all.collect { |t| [t.name, t.id] },
           {}, class: "form-control" %>
   </div>
   <div class="form-group field">
-    <%= f.label :team_size %><br>
-    <%= f.text_field :team_size, class: "form-control" %>
+    <%= label_tag :team_size, "Tamanho da sua Equipe Comercial" %>
+    <%= f.select :team_size, Lead::TEAM_SIZES.map { |s| [s, s] },
+          { include_blank: true }, class: "form-control" %>
   </div>
 
   <div class="actions">
-    <%= submit_tag "Cadastrar", class: 'btn btn-primary btn-lg btn-full' %>
+    <%= submit_tag "Concorrer ao iPhone", class: 'btn btn-primary btn-lg btn-full' %>
   </div>
 <% end %>
