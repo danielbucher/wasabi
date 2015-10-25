@@ -3,12 +3,18 @@ class Lead < ActiveRecord::Base
   PHONE_EX = /\((\d{2})\)\s(\d{4,5}\-\d{4})/
   EMAIL_EX = /\A(?:(?:[\w`~!#$%^&*\-=+;:{}'|,?\/]+(?:(?:\.(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)*"|[\w`~!#$%^&*\-=+;:{}'|,?\/]+))*\.[\w`~!#$%^&*\-=+;:{}'|,?\/]+)?)|(?:"(?:\\?[\w`~!#$%^&*\-=+;:{}'|,?\/\.()<>\[\] @]|\\"|\\\\)+"))@(?:[a-zA-Z\d\-]+(?:\.[a-zA-Z\d\-]+)*|\[\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\])\z/
 
+  TEAM_SIZES = [ "1 pessoa",
+                   "2 pessoas",
+                   "Até 5 pessoas",
+                   "Até 10 pessoas",
+                   "Mais que 10 pessoas" ]
+
   belongs_to :position
   belongs_to :tool
 
   validates :name, :email, :mobile_phone, :position, :tool, :team_size,
     presence: true
-  validates :team_size, numericality: { only_integer: true }
+  validates :team_size, inclusion: { in: TEAM_SIZES }
   validate :email_format
   validate :phone_format
 
