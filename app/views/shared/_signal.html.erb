@@ -1,0 +1,16 @@
+<% if notice %>
+<div class="signal signal-info">
+  <button type="button" class="close">
+    <span>x</span>
+  </button>
+  <p class="notice"><%= notice %></p>
+</div>
+<% end %>
+<% if alert %>
+<div class="signal signal-info">
+  <button type="button" class="close">
+    <span>x</span>
+  </button>
+  <p class="alert"><%= alert %></p>
+</div>
+<% end %>

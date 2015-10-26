@@ -13,7 +13,8 @@ ready = ->
     else
       $("#other-tool").empty()
 
-
+  $(".close").click ->
+    $(".signal").remove()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)

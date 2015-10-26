@@ -1,6 +1,9 @@
 <%= form_for(@lead) do |f| %>
   <% if @lead.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="signal signal-error">
+      <button type="button" class="close">
+        <span>x</span>
+      </button>
       <ul>
       <% @lead.errors.full_messages.each do |message| %>
         <li><%= message %></li>

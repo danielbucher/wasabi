@@ -12,19 +12,8 @@
   <div class="container">
     <div class="row">
 
-      <!-- If using a side bar, change col-xs-12 to col-xs-9 -->
       <div id="page-content" class="col-xs-12">
-        <% if notice %>
-        <div class="alert alert-info">
-          <p class="notice"><%= notice %></p>
-        </div>
-        <% end %>
-        <% if alert %>
-        <div class="alert alert-warning">
-          <p class="alert"><%= alert %></p>
-        </div>
-        <% end %>
-
+        <%= render 'shared/signal' %>
         <%= yield %>
       </div>
     </div>
