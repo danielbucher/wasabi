@@ -3,6 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
+  $("#lead_mobile_phone").inputmask('(99) 9999[9]-9999')
+  # $("#lead_mobile_phone").inputmask("(9{2}) 9{4,5}-9{4}")
   $("#sb-tool").change ->
     value = $("#sb-tool").val()
     console.log(value + " selected for #sb-tool")
