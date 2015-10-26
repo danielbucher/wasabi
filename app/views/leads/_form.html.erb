@@ -1,8 +1,6 @@
 <%= form_for(@lead) do |f| %>
   <% if @lead.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
-
       <ul>
       <% @lead.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -35,11 +33,11 @@
   <div class="form-group field">
     <%= label_tag :tool, "Qual ferramenta você utiliza para organizar e acompanhar suas vendas?" %>
     <%= f.select :tool, Lead::TOOLS,
-          {}, class: "form-control" %>
+          {}, class: "form-control", id: 'sb-tool' %>
   </div>
-  <div class="form-group field">
-    <%= label_tag :tool, "Se respondeu outro, por favor escrever o nome:" %>
-    <%= text_field_tag 'lead[tool]', nil, class: "form-control" %>
+  <div class="form-group field" id="other-tool">
+    <!-- <%= label_tag :tool, "Se respondeu outro, por favor escrever o nome:" %>
+    <%= text_field_tag 'lead[tool]', nil, class: "form-control" %> -->
   </div>
   <div class="form-group field">
     <%= label_tag :team_size, "Tamanho da sua Equipe Comercial" %>
