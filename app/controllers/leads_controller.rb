@@ -30,7 +30,7 @@ class LeadsController < ApplicationController
 
     respond_to do |format|
       if @lead.save
-        format.html { redirect_to @lead, notice: 'Lead was successfully created.' }
+        format.html { redirect_to new_lead_path, notice: 'Cadastro realizado com sucesso.' }
         format.json { render :show, status: :created, location: @lead }
       else
         format.html { render :new, layout: 'dark_application' }
