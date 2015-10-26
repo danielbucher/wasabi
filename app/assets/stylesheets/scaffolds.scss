@@ -41,33 +41,30 @@ div {
   color: green;
 }
 
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
+// .field_with_errors {
+//   padding: 2px;
+//   background-color: red;
+//   display: table;
+// }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  width: 250px;
+  max-width: 250px;
+  // border: 2px solid red;
+  webkit-box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  moz-box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  padding: 7px 5px 5px 0px;
+  margin-bottom: 10px;
+  background-color: #eddd74;
+  color: #665924;
 
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
+  ul {
+    padding-left: 25px
   }
 
   ul li {
     font-size: 12px;
-    list-style: square;
+    list-style: none;
   }
 }
