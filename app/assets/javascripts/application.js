@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require turbolinks
+//= require inputmask.js
+//= require jquery.inputmask.js
+//= require inputmask.extensions.js
+//= require inputmask.dependencyLib.jquery.js
+//= require inputmask.regex.extensions.js
 //= require_tree .
