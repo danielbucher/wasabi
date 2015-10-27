@@ -5,6 +5,28 @@
 
 Project Wasabi was created to support our sales team during an event and consists of an registration platform for leads.
 
+## Setup
+
+1. Install gems
+
+```
+bundle install
+```
+
+2. Setup database
+
+```
+rake db:create
+rake db:migrate
+rake db:seed
+```
+
+## Run
+
+```
+rails s
+```
+
 ## License
 
 Copyright © 2015 The Author developers.
