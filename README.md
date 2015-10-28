@@ -47,3 +47,4 @@ with this program. If not, see [www.gnu.org/licenses/](http://www.gnu.org/licens
 
 * Amanda Alvernaz (amanda at agendor.com.br)
 * Daniel C. Bucher (daniel.bucher88 at gmail.com)
+* Tulio M. Azul (tulio at agendor.com.br)
