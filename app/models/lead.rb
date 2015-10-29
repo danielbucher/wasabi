@@ -1,3 +1,5 @@
+require 'csv'
+
 class Lead < ActiveRecord::Base
 
   PHONE_EX = /\((\d{2})\)\s(\d{4,5}\-\d{3,4})/
@@ -31,6 +33,17 @@ class Lead < ActiveRecord::Base
               'Outros'
   ]
 
+  CSV_FIELDS = { 'nome' => :name,
+                  'email' => :email,
+                  'empresa' => :company,
+                  'ramo' => :sector,
+                  'twitter' => :twitter,
+                  'celular' => :mobile_phone,
+                  'cargo' => :position,
+                  'ferramenta' => :tool,
+                  'tamanho da equipe' => :team_size
+  }
+
   belongs_to :position
 
   validates :name, :email, :mobile_phone, :position, :tool, :team_size,
@@ -38,6 +51,26 @@ class Lead < ActiveRecord::Base
   validates :team_size, inclusion: { in: TEAM_SIZES }
   validate :email_format
   validate :phone_format
+
+  def self.to_csv
+    CSV.generate do |csv|
+
+
+      csv << CSV_FIELDS.keys
+      all.each do |lead|
+        values = []
+        CSV_FIELDS.each_value do |field|
+          if field == :position
+            value = lead.position.try(:name)
+          else
+            value = lead.send(field)
+          end
+          values << value
+        end
+        csv << values
+      end
+    end
+  end
 
   protected
 
