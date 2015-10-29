@@ -18,6 +18,19 @@ class Lead < ActiveRecord::Base
             'Outro'
   ]
 
+  SECTORS = [ 'Agência de Comunicação / Digital',
+              'Agência de Turismo / Viagens',
+              'Agricultura / Agronegócio',
+              'Automação comercial / residencial / industrial',
+              'Consultoria de TI / RH / Marketing e outros',
+              'Contabilidade',
+              'Educação',
+              'Prestador de serviços',
+              'Software',
+              'Tecnologia',
+              'Outros'
+  ]
+
   belongs_to :position
 
   validates :name, :email, :mobile_phone, :position, :tool, :team_size,

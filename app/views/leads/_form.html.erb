@@ -25,6 +25,11 @@
     <%= f.text_field :company, class: "form-control" %>
   </div>
   <div class="form-group field">
+    <%= label_tag :sector, "Ramo de Atividade" %>
+    <%= f.select :sector, Lead::SECTORS,
+          { include_blank: true }, class: "form-control" %>
+  </div>
+  <div class="form-group field">
     <%= label_tag :twitter %>
     <%= f.text_field :twitter, class: "form-control" %>
   </div>
@@ -43,8 +48,7 @@
           {}, class: "form-control", id: 'sb-tool' %>
   </div>
   <div class="form-group field" id="other-tool">
-    <!-- <%= label_tag :tool, "Se respondeu outro, por favor escrever o nome:" %>
-    <%= text_field_tag 'lead[tool]', nil, class: "form-control" %> -->
+
   </div>
   <div class="form-group field">
     <%= label_tag :team_size, "Tamanho da sua Equipe Comercial" %>
