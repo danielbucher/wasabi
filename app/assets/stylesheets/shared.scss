@@ -22,3 +22,43 @@
   padding: 8px 0px 0px 30px;
   margin-left: 0px;
 }
+
+.signal {
+  width: 100%;
+  max-width: 100%;
+  // width: 250px;
+  // max-width: 250px;
+  -webkit-box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  -moz-box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  box-shadow: 3px 3px 7px rgba(0,0,0,.2);
+  padding: 2px 5px 5px 0px;
+  margin-bottom: 20px;
+}
+
+.signal-info {
+  background-color: #39b125;
+  color: #fff;
+  padding-left: 10px;
+  p {
+    padding-top: 4px;
+  }
+}
+
+.signal-warning {
+  background-color: #eddd74;
+  color: #665924;
+}
+
+.signal-error {
+  background-color: #eddd74;
+  color: #665924;
+
+  ul {
+    padding-left: 15px
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: none;
+  }
+}
